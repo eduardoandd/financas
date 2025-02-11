@@ -1,13 +1,30 @@
-// This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
-// https://nextjs.org/learn/dashboard-app/fetching-data
+import { v4 as uuidv4 } from 'uuid';
+
 const users = [
   {
-    id: '410544b2-4001-4271-9855-fec4b6a6442a',
+    id: uuidv4(),
     name: 'User',
     email: 'user@nextmail.com',
     password: '123456',
   },
+  {
+    id: uuidv4(),
+    name: 'euUser',
+    email: 'eduardo.andrade.dev@gmail.com',
+    password: '123456',
+  },
 ];
+
+const expenses = [
+  {
+    id: uuidv4(),
+    user_id: users[0].id,
+    name: 'Suplemento',
+    price: 129.99,
+    description: 'Integral médica',
+    date: new Date()
+  }
+]
 
 const customers = [
   {
@@ -144,4 +161,4 @@ const revenue = [
   { month: 'Dec', revenue: 4800 },
 ];
 
-export { users, customers, invoices, revenue };
+export { users, customers, invoices, revenue, expenses };
